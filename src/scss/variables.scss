@@ -1,0 +1,88 @@
+// Colors
+
+$black:                       hsl(0, 0%, 0%);
+$gray-darkest:                hsl(0, 0%, 10%);
+$gray-darker:                 hsl(0, 0%, 20%);
+$gray-darken:                 hsl(0, 0%, 30%);
+$gray-dark:                   hsl(0, 0%, 40%);
+$gray:                        hsl(0, 0%, 50%);
+$gray-light:                  hsl(0, 0%, 60%);
+$gray-lighten:                hsl(0, 0%, 70%);
+$gray-lighter:                hsl(0, 0%, 80%);
+$gray-lightest:               hsl(0, 0%, 90%);
+$white:                       hsl(0, 0%, 100%);
+
+$color-main:                  #ff5755;
+$color-secondary:             #fafafa;
+
+
+
+// Semantic colors
+
+$text-color:                  $gray-darkest;
+$text-color-muted:            $gray;
+$body-bg:                     $white;
+
+$link-color:                  $color-main;
+$link-color--hover:           darken($color-main, 15%);
+
+$border-color:                $gray-lighten;
+$focus-color:                 #2f7cc0;
+
+
+
+// Typography
+
+$font-size:                   16px;
+
+$font-size-h1:                40px;
+$font-size-h2:                32px;
+$font-size-h3:                24px;
+$font-size-h4:                18px;
+$font-size-h5:                16px;
+$font-size-h6:                16px;
+
+$font-size-sm:                0.75rem; // 12px from 16px
+
+$line-height:                 1.5;
+
+$typo-margin-vertical:        1em;
+
+$font-family:                 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+// Georgia, Times New Roman, Times, serif
+
+
+
+// Widths
+
+$screen-xs:                   0;
+$screen-sm:                   480px;
+$screen-md:                   768px;
+$screen-lg:                   992px;
+$screen-xl:                   1200px;
+// $screen-xxl:                  1800px;
+
+$container-sm:                100%;
+$container-md:                100%;
+$container-lg:                $screen-lg - 30;
+$container-xl:                $screen-xl - 30;
+// $container-xxl:               $screen-xxl - 30;
+
+
+
+// Grid
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+
+
+// Anything
+
+$field-padding-vertical:      15px;
+$field-padding-horizontal:    30px;
+
+$border-radius:               30px;
+$opacity:                     0.7;
+$transition-time:             0.3s;
+$shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);

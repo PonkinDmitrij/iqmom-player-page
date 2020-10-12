@@ -21,7 +21,7 @@ $color-secondary:             #fafafa;
 
 $text-color:                  $gray-darkest;
 $text-color-muted:            $gray;
-$body-bg:                     $white;
+$body-bg:                     $color-secondary;
 
 $link-color:                  $color-main;
 $link-color--hover:           darken($color-main, 15%);

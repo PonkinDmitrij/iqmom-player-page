@@ -1,0 +1,48 @@
+.socials {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  list-style: none;
+
+  &__item {
+    margin: 0 10px 20px;
+  }
+
+  &__link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent center / contain no-repeat;
+
+    &:hover {
+      opacity: $opacity;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+
+      @media (any-pointer: fine) {
+        @include field-focus();
+      }
+    }
+
+    &--wa {
+      background-image: url('../img/icons/whatsapp.svg');
+    }
+
+    &--inst {
+      background-image: url('../img/icons/instagram.svg');
+    }
+
+    &--telegram {
+      background-image: url('../img/icons/telegram.svg');
+    }
+  }
+
+  &__text {
+    @include visually-hidden();
+  }
+}

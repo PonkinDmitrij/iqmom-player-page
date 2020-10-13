@@ -1,0 +1,22 @@
+.page-footer {
+  padding: 30px 0;
+  text-align: center;
+  background-color: $gray-lighter;
+
+  &__inner {
+    @include container();
+  }
+
+  &__text {
+    margin-bottom: 5px;
+  }
+
+  &__socials {
+    margin-bottom: 5px;
+  }
+
+  &__copyright {
+    margin: 0;
+    font-size: $font-size-sm;
+  }
+}

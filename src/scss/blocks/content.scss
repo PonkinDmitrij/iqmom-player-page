@@ -1,0 +1,94 @@
+.content {
+  padding: 60px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 100px 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 120px 0;
+  }
+
+  & + & {
+    padding-top: 0;
+  }
+
+  &__inner {
+    @include container();
+  }
+
+  &__wrap {
+    padding: 15px;
+    background-color: $white;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+
+    @media (min-width: $screen-sm) {
+      padding: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 30px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 50px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+
+    @media (min-width: $screen-sm) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 40px;
+      font-size: 40px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 50px;
+      font-size: 44px;
+    }
+  }
+
+  &__video {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &__desc {
+    margin-top: 35px;
+    border-top: 1px solid rgba($black, 0.2);
+    padding-top: 20px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

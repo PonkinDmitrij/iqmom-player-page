@@ -1,22 +1,18 @@
 .page-title {
   padding: 60px 0;
-  font-size: $font-size-h1;
   text-align: center;
   background-color: $white;
 
   @media (min-width: $screen-md) {
     padding: 80px 0;
-    font-size: 44px;
   }
 
   @media (min-width: $screen-lg) {
     padding: 100px 0;
-    font-size: 48px;
   }
 
   @media (min-width: $screen-xl) {
     padding: 120px 0;
-    font-size: 52px;
   }
 
   &__inner {
@@ -24,7 +20,33 @@
 
     h1 {
       margin: 0;
-      font-size: inherit;
+      margin-bottom: 30px;
+      font-size: $font-size-h1;
+
+      @media (min-width: $screen-md) {
+        font-size: 44px;
+      }
+
+      @media (min-width: $screen-lg) {
+        font-size: 48px;
+      }
+
+      @media (min-width: $screen-xl) {
+        font-size: 52px;
+      }
     }
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 700;
+
+    span {
+      color: $color-main;
+    }
+  }
+
+  &__subtitle:last-child {
+    margin-bottom: 0;
   }
 }

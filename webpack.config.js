@@ -8,14 +8,17 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = !isProd;
 
-const filename = (ext) => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`);
+const NAME = 'planting-course';
+
+const filename = (name = 'bundle', ext) =>
+  isDev ? `${name}.${ext}` : `${name}.[hash].${ext}`;
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: ['./js/index.js'],
   output: {
-    filename: `js/${filename('js')}`,
+    filename: `${NAME}/js/${filename(NAME, 'js')}`,
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -32,11 +35,13 @@ module.exports = {
     compress: true,
     progress: true,
     watchContentBase: true,
+    index: `${NAME}.html`,
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      template: 'index.html',
+      template: 'template.html',
+      filename: `${NAME}.html`,
       minify: {
         removeComments: isProd,
         collapseWhitespace: isProd,
@@ -46,20 +51,20 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/img'),
-          to: path.resolve(__dirname, 'dist/img'),
+          to: path.resolve(__dirname, `dist/${NAME}/img`),
         },
         {
           from: path.resolve(__dirname, 'src/fonts'),
-          to: path.resolve(__dirname, 'dist/fonts'),
+          to: path.resolve(__dirname, `dist/${NAME}/fonts`),
         },
         {
           from: path.resolve(__dirname, 'src/favicon'),
-          to: path.resolve(__dirname, 'dist/img/favicon'),
+          to: path.resolve(__dirname, `dist/${NAME}/img/favicon`),
         },
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: `css/${filename('css')}`,
+      filename: `${NAME}/css/${filename(NAME, 'css')}`,
     }),
     new BrowserSyncPlugin(
       {
